@@ -7,9 +7,13 @@ with the pygame library used for visualization.
 * More information about the algorithms - [pathfinding](https://en.wikipedia.org/wiki/Pathfinding), [maze generation](https://en.wikipedia.org/wiki/Maze_generation_algorithm)
 * Extensive information about specific maze generation algorithms [here](https://weblog.jamisbuck.org/2011/2/7/maze-generation-algorithm-recap)
 
+## Requirements ##
+-python3
+-pygame
+
 ## Setup ##
-To run the project locally you'll need to clone or download the repository and either use the .exe file
-or if you want to play around with the code have python3 and the pygame library installed.
+To run the project locally you'll need to clone or download the repository and run the .exe file.
+For people with python3 installed, simply run python3 main.py in the downloaded folder.
 * You can download the repo and extract the directiory like that:
   ![](screenshots/help_download.png?raw=true)
   ![](screenshots/help_extract.png?raw=true)
