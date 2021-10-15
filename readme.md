@@ -17,7 +17,6 @@ For people with python3 installed, simply run python3 main.py in the downloaded 
 * You can download the repo and extract the directiory like that:
   ![](screenshots/help_download.png?raw=true)
   ![](screenshots/help_extract.png?raw=true)
-Then simply run the pathfinder.exe file.
 
 
 ## Controls ##
