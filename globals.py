@@ -1,7 +1,10 @@
 import pygame.image
 import pygame.font
+import os.path
 """ in this file are defined all global variables that are going to be used in
     the main application (main.py) """
+
+cells = 40  # change cells variable to increase the number of tiles on the screen
 
 # define colors
 BLACK = (0, 0, 0)
@@ -15,12 +18,12 @@ PATH_COLOR = (252, 247, 113)
 HOVERED = (55, 89, 46)
 
 # load images
-obstacle_img = pygame.image.load('img\\obstacle_color.png')
-start_img = pygame.image.load('img\\start_color.png')
-end_img = pygame.image.load('img\\end_color.png')
-visited_img = pygame.image.load('img\\visited_color.png')
-path_img = pygame.image.load('img\\path_color.png')
-number_img = pygame.image.load('img\\number_img.png')
+obstacle_img = pygame.image.load(os.path.join('img', 'obstacle_color.png'))
+start_img = pygame.image.load(os.path.join('img', 'start_color.png'))
+end_img = pygame.image.load(os.path.join('img', 'end_color.png'))
+visited_img = pygame.image.load(os.path.join('img', 'visited_color.png'))
+path_img = pygame.image.load(os.path.join('img', 'path_color.png'))
+number_img = pygame.image.load(os.path.join('img', 'number_img.png'))
 main_menu_imgs = (obstacle_img, start_img, end_img, visited_img, path_img, number_img)
 
 # load fonts

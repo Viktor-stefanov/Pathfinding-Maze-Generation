@@ -1,12 +1,11 @@
-from globals import PATH_COLOR, VISITED_COLOR
+from display import *
+from globals import *
 from queue import PriorityQueue
-from main import redraw_window
 
 def reconstruct_path(path, start, end, wg, board):
     for node in path[::-1]:
         node.color = PATH_COLOR
         redraw_window(start, end, board, wg=wg)
-
 
 def find_path(end):
     # find the path from the end point to the start
@@ -18,13 +17,11 @@ def find_path(end):
 
     return path
 
-
 def find_bi_path(a, b):
     path = find_path(b)[::-1]
     path.extend(find_path(a))
 
     return path
-
 
 def distance(a, b):
     # return math.sqrt((a.x - b.x) * (a.x - b.x) + (a.y - b.y) * (a.y - b.y)) # pythagorean theorem - use for weighted graphs?
@@ -54,7 +51,7 @@ def bidirectional_dijkstra(start, end, wg, maze, board):
 
     visited_set = set()
 
-    q = PriorityQueue()
+    q = priorityQueue()
     entry = 0
 
     q.put((0, entry, start, 'a'))
