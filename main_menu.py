@@ -1,3 +1,4 @@
+import run_algorithm as ra
 from display import *
 from globals import *
 
@@ -84,7 +85,6 @@ def main_menu():
     while True:
         menu_surface.fill(WHITE)
         rects = blit_text(hover, maze, pf, e_maze, e_pf, mg, wg)
-
         x, y = pygame.mouse.get_pos()
         x, y = x / (WIN.get_width() / menu_surface.get_width()), y / (WIN.get_height() / menu_surface.get_height())
         for event in pygame.event.get():
@@ -95,7 +95,7 @@ def main_menu():
                     pf_alg = pathfinding_algs[pf] if pf is not None else None
                     maze_alg = maze_generation_algs[maze] if maze is not None else None
                     if pf_alg is not None:
-                        return pf_alg, maze_alg, mg, wg
+                        ra.run_algorithm(pf_alg, maze_alg, mg, wg)
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:
                     clicked = [rect.collidepoint((x, y)) for rect in rects]

@@ -1,6 +1,6 @@
 from algorithms.pathfinding_algorithms import *
 from algorithms.mazegen_algorithms import *
-from main_menu import *
+from main_menu import main_menu 
 from display import *
 from node import *
 
